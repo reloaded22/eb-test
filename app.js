@@ -1,15 +1,11 @@
 // const express = require('express');
 import express, { json } from "express";
+import testRouter from "./routes/testRoutes.js";
 
 // const app = express();
 const app = express();
 
-app.use(json());
-
-app.get('/', (req, res) => { 
-    console.log("this is working bitches");
-    res.send("hello world!"); 
-});
+app.use("/", testRouter);
 
 const PORT = process.env.PORT || 3000;
 
