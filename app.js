@@ -1,8 +1,10 @@
-const express = require('express');
+// const express = require('express');
+import express, { json } from "express";
 
+// const app = express();
 const app = express();
 
-app.use(express.json());
+app.use(json());
 
 app.get('/', (req, res) => { 
     console.log("this is working bitches");
