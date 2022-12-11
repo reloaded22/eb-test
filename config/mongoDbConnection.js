@@ -1,12 +1,8 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 mongoose.set("strictQuery", false);
 
 const mongoDbConnection = () => {
-    console.log(process.env.MONGO_URL);
     try {
         mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,

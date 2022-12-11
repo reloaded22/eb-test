@@ -2,6 +2,9 @@
 import express, { json } from "express";
 import mongoDbConnection from "./config/mongoDbConnection.js";
 import testRouter from "./routes/testRoutes.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 mongoDbConnection();
 
