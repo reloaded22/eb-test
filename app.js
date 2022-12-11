@@ -1,6 +1,9 @@
 // const express = require('express');
 import express, { json } from "express";
+import mongoDbConnection from "./config/mongoDbConnection.js";
 import testRouter from "./routes/testRoutes.js";
+
+mongoDbConnection();
 
 // const app = express();
 const app = express();
